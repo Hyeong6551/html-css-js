@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*################ header  ###############*/
+#head { display: flex; }
+#head h1, #head form { flex: none; }
+#head h1 { width: 160px; margin: 20px 0;}
+#head form { margin-left: auto; }
+#head form #searchText { text-indent: 10px; width: 480px; height: 30px; margin: 20px 0; }
+#head form #searchButton { vertical-align: middle; }
+
+nav li { display: inline-block; }
+nav li a { display: inline-block; margin:0 20px; }
+
+/*############### visual  ###############*/
+#visual { background: url("/img/main.jpg") no-repeat center fixed;
+    position: relative; }
+#visual .visual_desc { position: absolute;  width: 15%; top: 15%; right: 75%; padding: 17px; color: white; background-color: #1570a6;
+    transition: all 0.5s;
+}
+#visual .visual_desc h4 { font-size: 150%; }
+#visual .visual_desc p { margin: 20px 0; }
+#visual .visual_desc a { color: white; }
+#visual .visual_desc:hover { box-shadow: 7px 7px 7px #5f5f5f; border-radius: 15px; }
+
+/*############### content  ###############*/
+#content ul { display: flex; }
+#content ul li { flex: 1; font-size: 85%; font-weight: bold; text-align: center;
+    overflow: hidden;    text-overflow: ellipsis; white-space: nowrap;}
+
+#content img { transition-duration: 0.7s; }
+#content img:hover {transform: scale(0.9);}
+
+/*################ footer  ###############*/
+#footer li { display: inline-block; margin-right: 5px; }
+#footer a { color: #ccc; }
+#wrap { display : flex; flex-direction: column; }
+#wrap #footer { margin-top: auto; }

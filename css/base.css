@@ -1,0 +1,5 @@
+@charset "UTF-8";
+body { font-family:'Malgun Gothic', 'dotum', sans-serif; color: black; }
+a:link, a:visited { color: #000; text-decoration: none;}
+a:hover, a:focus { color: #f00; text-decoration: underline;}
+.hidden { position: absolute; left: -9999%; width: 1px; height: 1px; overflow: hidden; line-height: 0; } 
