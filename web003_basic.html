@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /* 유일한 값 */
+        /* id="one" -> # */ 
+        #one { background-color: gold; height: 50px;}
+        #two { background-color: goldenrod; height: 60px;}
+        #three { background-color: gold; height: 70px;}
+        #four { background-color: goldenrod; height: 80px;}
+        
+        /* 공통으로 사용 가능 */
+        /* class="odd" -> . */
+        .odd { background-color: aqua; height:50px;}
+        .even { background-color: aquamarine; height: 50px;}
+    </style>
+</head>
+<body>
+    <div>
+        <h3>1. CSS-인라인방법법</h3>
+        <p style="background-color: red; color: white;"> APPLE은 RED</p>
+        <p style="background-color: yellow; color: white; height: 100px;"> BANANA는 YELLOW - 배경색:yellow, 글자:white, 높이:50px</p>
+        <p>만약 2000줄이 넘는 html이라면.... css를 수정하려면... 찾기가 너무 힘들다! 인라인의 단점!</p>
+    </div>
+    <!-- 1. CSS-인라인방법법 -->
+    <!-- 1. CSS-인라인방법법 -->
+    <!-- 1. CSS-인라인방법법 -->
+
+    <div>
+        <h3>1. CSS-내부적용방법 -  id</h3>
+        <p id="one">ONE</p>
+        <p id="two">TWO</p>
+        <p id="three">THREE</p>
+        <p id="four">FOUR</p>
+
+        <h3>2. CSS-내부적용방법 -  css</h3>
+        <p class="odd">ONE</p>
+        <p class="even">TWO</p>
+        <p class="odd">THREE</p>
+        <p class="even">FOUR</p>
+    </div>  
+    <!-- web003_basic.html -->
+    <!-- 2. id , class-내부적용방법 -->
+    <!-- 2. id , class-내부적용방법 -->
+    <!-- 2. id , class-내부적용방법 -->
+</body>
+</html>
