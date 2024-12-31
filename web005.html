@@ -45,12 +45,12 @@
 		4. section 태그에          -  id값  content      높이: 258px, 배경색: thistle
 		5. footer  태그에          -  id값  footer       높이: 74px , 배경색: #333
 		6. 공통 가운데 속성         - 클래스값  container  가로: 85%, 좌우 중앙으로   */
-	.wrap { background-color: #ccc; }
+
 	.container { width: 85%; margin: auto;}
-	#header { height: 140px; background-color: deepskyblue; }
-	#visual { height: 642px; background-color: lightblue; }
-	#content { height: 258px; background-color: thistle; }
-	#footer { height: 74px; background-color: #333;}
+	#header { height: 140px; }
+	#visual { height: 642px;  }
+	#content { height: 258px;  }
+	#footer { height: 74px; background-color: #333; text-align:center; padding-top: 20px;}
 
 	/*################ footer  ###############*/
     /*Q9. #wrap 안에   #footer가  제일 하단에 오도록 flex 를 설정하시오.
@@ -79,9 +79,9 @@
 	*/
 	#head form #searchText { text-indent: 10px; width: 480px; height: 30px; margin: 20px 0; }
 	#head form #searchButton { vertical-align: middle; }
-	
+
 	nav li { display: inline-block; }
-	nav li a { margin:0 20px; }
+	nav li a { display: inline-block; margin:0 20px; }
 	
 	/*############### visual  ###############*/
 	/* Q15. #visual 의 배경 넣기   main.jpg
@@ -92,21 +92,31 @@
 	   Q18. .visual_desc  안의 p  위아래 바깥쪽여백 20px
 	   Q19. .visual_desc  안의 a  글자색상 white
 	*/
-	#visual { background-image: url(img/main.jpg);}
-	.visual_desc { position: absolute;  width: 15%; top: 15%; right: 75%; padding: 17px; color: white; background-color: #1570a6; }
-	.visual_desc h4 { font-size: 150%; }
-	.visual_desc p { margin: 20px 0; }
-	.visual_desc a { color: white; }
-
+	#visual { background: url(img/main.jpg) no-repeat center fixed;
+		position: relative; }
+	#visual .visual_desc { position: absolute;  width: 15%; top: 15%; right: 75%; padding: 17px; color: white; background-color: #1570a6;
+		transition: all 0.5s;
+	}
+	#visual .visual_desc h4 { font-size: 150%; }
+	#visual .visual_desc p { margin: 20px 0; }
+	#visual .visual_desc a { color: white; }
+	#visual .visual_desc:hover { box-shadow: 7px 7px 7px #5f5f5f; border-radius: 15px; }
+	
 	/*############### content  ###############*/
 	/* Q20.  #content 의 ul - display를 이용하여 안쪽의 콘텐츠만큼 배치하기 (동적으로 균등하게 배치) ,  중앙정렬
-	   Q21.  #content 의 ul li 는
+	   Q21.s  #content 의 ul li 는
 	   	- 유연하기 늘어나거나, 줄어들수 있고 , 기본크기는 0% - flex:1 로 설정하기
 	    - 글자사이즈 : 85%, 굵게, 글자길이가 넘어가면 ...표시
 		   overflow:hidden;   text-overflow: ellipsis;  white-space: nowrap;
 	*/
 	#content ul { display: flex; }
-	#content ul li { flex: 1; font-size: 85%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	#content ul li { flex: 1; font-size: 85%; font-weight: bold; text-align: center;
+		overflow: hidden;    text-overflow: ellipsis; white-space: nowrap;}
+		/* 넘치는 글자 숨기기,	... 표시,				문단 한줄로 */
+
+	/* 마우스 올렸을 때 이미지 사이즈 서서히 감소 */	
+	#content img { transition-duration: 0.7s; }
+	#content img:hover {transform: scale(0.9);}
 
 	/*############### footer  ###############*/
 	/* Q22. #footer li - display 속성을  가로방향으로 배치, 블록의 속성사용가능하게 설정  , 오른쪽 바깥속성 5px
@@ -158,6 +168,11 @@
 				<p>
 					기존의 노트북을 바꿀만한 가치의 태블릿을 만나보세요
 				</p>
+				<!-- control -->
+				<video style="width: 100%" autoplay muted loop>
+					<source src="img/visual.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				  </video>
 				<p>Surface Pro3.</p>
 				<p><a href="#" title="자세히 보기">자세히 보기</a></p>
 			</div>
@@ -172,7 +187,7 @@
 			<h3  class="hidden">컨텐츠 영역</h3>
 			<ul>
 				<li>
-					<a href="#" title="이미지1">
+					<a href="#" title="최고의 게임">
 						<img src="img/b01.png" alt="이미지1"/>
 					</a>
 					<p>
@@ -180,7 +195,7 @@
 					</p>
 				</li>
 				<li>
-					<a href="#" title="이미지2">
+					<a href="#" title="무료 사용">
 						<img src="img/b02.jpg" alt="이미지2"/>
 					</a>
 					<p>
@@ -188,7 +203,7 @@
 					</p>
 				</li>
 				<li>
-					<a href="#" title="이미지3">
+					<a href="#" title="멋진 선물">
 						<img src="img/b03.jpg" alt="이미지3"/>
 					</a>
 					<p>
