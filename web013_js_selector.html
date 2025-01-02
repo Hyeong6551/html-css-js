@@ -12,6 +12,17 @@
 
     <script>
       // 작업위치4
+      // 윈도우가              로드가 되면 처리
+      // 위치 상관없이
+      // window.addEventListener('load',function(){  
+      //   const byidex = document.getElementById("byidex");
+      //   console.log(byidex);
+      //   byidex.addEventListener("click", function(){
+      //     let fav_color = prompt("좋아하는 색상은?");
+      //     alert("당신이 좋아하는 색상은 " + fav_color + "입니다.");
+      //   });
+      // });
+      
     </script>
 </head>
 <body>
@@ -38,10 +49,12 @@
     <script>
       // Q1. getElementById + addEventListener (alert)
       // const byid = document.querySelector("#byid");
-      const byid = document.getElementById("byid");
-      byid.addEventListener("click", function(e){
-        alert("hoho");
-      });
+      
+       const byid = document.getElementById("byid");
+       byid.addEventListener("click", function(e){
+         alert("hoho");
+       });
+      
     </script>
   </div>
   <!--     -->
@@ -52,12 +65,11 @@
     <input type="button"  value="ByIdEx-당신이좋아하는색상"  title="버튼4"  id="byidex"   class="btn btn-success" />
     <script>
       // Q2. getElementById + addEventListener (prompt + alert)
-      const color = document.getElementById("byidex");
-      color.addEventListener("click", function(e){
-        let fav_color = prompt("좋아하는 색상은?");
-        alert("당신이 좋아하는 색상은 " + fav_color + "입니다.");
-      });
-
+      // const byidex = document.getElementById("byidex");
+      // byidex.addEventListener("click", function(){
+      // let fav_color = prompt("좋아하는 색상은?");
+      //  alert("당신이 좋아하는 색상은 " + fav_color + "입니다.");
+      // });
     </script>
   </div>
 </div>
@@ -71,7 +83,15 @@
     <h4>STEP2. window.addEventListener</h4>
     <input type="button"  value="addEventListener"  title="버튼4"  id="addEvent"    class="btn btn-outline-primary"    />
     <script>
-        // 작업위치3
+      // 작업위치3
+      // Q3. 버튼 4누르면 작업 위치 상관없이 1~5번 알림
+      window.addEventListener('load', function(){
+        const addEvent = document.getElementById("addEvent");
+
+        addEvent.addEventListener("click", function(){
+          alert("1"),alert("2"),alert("3"),alert("4"),alert("5");
+        });
+      });
     </script>
   </div>
   <!--     -->
@@ -81,7 +101,22 @@
     <h4>EX</h4>
     <input type="button"  value="addEventEx-Five Count"  title="버튼5"  id="addEventEx"  class="btn btn-success" />
     <script>
-      // 작업위치5
+      // 작업위치 상관없이
+      // Q4. 마우스 올렸을 때 버튼의 원하는 배경색, 글자 사이즈 25px
+      // 마우스 뗐을 때 원하는 배경색, 글자 사이즈 30px
+      window.addEventListener("load", function(){
+        const addEventEx = document.getElementById("addEventEx");
+
+        addEventEx.addEventListener("mouseenter", function(){
+          addEventEx.style.backgroundColor="violet";
+          addEventEx.style.fontSize="25px";
+        });
+
+        addEventEx.addEventListener("mouseleave", function(){
+          addEventEx.style.backgroundColor="skyblue";
+          addEventEx.style.fontSize="30px";
+        });
+      });
     </script>
   </div>
 </div>
