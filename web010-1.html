@@ -47,8 +47,10 @@
               search.addEventListener("click", function(){
                 if (search_target.value == ""){
                   alert("빈칸");
-                  search_target.focus();
+                  search_target.focus();                 
                 }
+                //location.href="https://search.naver.com/search.naver?query="+search_target.value;
+                location.href="https://www.google.com/search?q="+search_target.value;
               });
             });
             </script>
